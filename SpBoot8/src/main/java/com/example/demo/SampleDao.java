@@ -16,7 +16,6 @@ public class SampleDao {
     
     // ①更新処理
 	@Transactional(isolation=Isolation.READ_COMMITTED,
-            rollbackFor=RuntimeException.class,
             propagation=Propagation.REQUIRED)
     public void update(){
     	jdbcTemplate.update("insert into sampletable(text) values('trial text')");
