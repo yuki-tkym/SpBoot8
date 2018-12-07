@@ -23,6 +23,9 @@ public class Spboot8Controller {
 		
 		List texts = dao.select();
 		System.out.println(texts);
+		
+		/*List results = dao.joinSelect();
+		System.out.println(results);*/
 		mv.setViewName("index");
 		return mv;
 	}
