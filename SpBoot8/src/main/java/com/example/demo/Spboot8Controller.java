@@ -21,8 +21,8 @@ public class Spboot8Controller {
 		}
 		
 		
-		List names = dao.select();
-		System.out.println(names);
+		List texts = dao.select();
+		System.out.println(texts);
 		mv.setViewName("index");
 		return mv;
 	}
