@@ -18,14 +18,14 @@ public class SampleDao {
 	@Transactional(isolation=Isolation.READ_COMMITTED,
             propagation=Propagation.REQUIRED)
     public void update(){
-    	jdbcTemplate.update("insert into sampletable(text) values('trial text')");
+    	jdbcTemplate.update("insert into texttable(text) values('inserted data-spboot8')");
     	System.out.println("更新中");
         return;
     }
     
     // ②検索処理
     public List select(){
-        List ret = jdbcTemplate.queryForList("select text from sampletable", String.class);
+        List ret = jdbcTemplate.queryForList("select text from texttable", String.class);
         return ret;
     }
 }
