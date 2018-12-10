@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -27,13 +28,13 @@ public class SampleDao {
     // ②検索処理
     public List select(){
     	String sql = "select text from texttable";
-        List ret = jdbcTemplate.queryForList(sql, String.class);
+    	List ret = jdbcTemplate.queryForList(sql,String.class);
         return ret;
     }
     //
     public List joinSelect(){
     	String sql = "select * from country natural join customer";
-        List ret = jdbcTemplate.queryForList(sql, String.class);
+    	List ret = jdbcTemplate.queryForList(sql);
         return ret;
     }
 }
